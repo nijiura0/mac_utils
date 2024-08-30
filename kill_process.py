@@ -41,8 +41,5 @@ def close_system_preferences():
             pid = process_info[1]
             subprocess.run(["kill", "-SIGKILL", pid])
 
-now = dt.datetime.now()
-real_time = f"echo '{now:%Y-%m-%d %H時%M分%S秒} kill_process.py' >> ~/documents/tools2/date.txt"
-subprocess.run([real_time],shell=True)
 
 close_system_preferences()
